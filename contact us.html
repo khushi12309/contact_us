@@ -1,0 +1,133 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #d0bfff, #c9f5ff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 460px;
+      transition: 0.3s;
+    }
+
+    .contact-box h2 {
+      font-size: 30px;
+      color: #4c3575;
+      font-weight: 600;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #4c3575;
+      display: inline-block;
+    }
+
+    .input-box {
+      position: relative;
+      margin-bottom: 22px;
+    }
+
+    .input-box i {
+      position: absolute;
+      top: 50%;
+      left: 18px;
+      transform: translateY(-50%);
+      color: #7c4cff;
+      font-size: 16px;
+    }
+
+    .input-box input,
+    .input-box textarea {
+      width: 100%;
+      padding: 14px 18px 14px 46px;
+      border: none;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.85);
+      font-size: 15px;
+      color: #333;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-box textarea {
+      height: 120px;
+      border-radius: 20px;
+      resize: none;
+    }
+
+    .input-box input:focus,
+    .input-box textarea:focus {
+      box-shadow: 0 0 0 2px #9e82ff;
+    }
+
+    .contact-box button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(90deg, #7c4cff, #6f8dfd);
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    .contact-box button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 5px 15px rgba(124, 76, 255, 0.4);
+    }
+
+    @media (max-width: 500px) {
+      .contact-box {
+        padding: 20px;
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form class="contact-box" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="a134653e-7309-4b4b-a382-0b8e2d77cb1f">
+
+    <h2>Contact Us</h2>
+
+    <div class="input-box">
+      <i class="fas fa-user"></i>
+      <input type="text" name="name" placeholder="Your Name" required />
+    </div>
+
+    <div class="input-box">
+      <i class="fas fa-envelope"></i>
+      <input type="email" name="email" placeholder="Your Email" required />
+    </div>
+
+    <div class="input-box">
+      <i class="fas fa-comment"></i>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</body>
+</html>
